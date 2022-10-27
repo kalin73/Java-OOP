@@ -7,25 +7,25 @@ public class StackOfStrings {
 
 	public void push(String item) {
 
-		data.add(item);
+		this.data.add(item);
 
 	}
 
 	public String pop() {
 
-		return data.remove(0);
+		return this.data.remove(this.data.size()-1);
 
 	}
 
 	public String peek() {
 
-		return data.get(0);
+		return this.data.get(0);
 
 	}
 
 	public boolean isEmpty() {
 
-		return data.isEmpty();
+		return this.data.isEmpty();
 
 	}
 }
