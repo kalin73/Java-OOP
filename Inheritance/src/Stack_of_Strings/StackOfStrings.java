@@ -19,7 +19,7 @@ public class StackOfStrings {
 
 	public String peek() {
 
-		return this.data.get(0);
+		return this.data.get(this.data.size()-1);
 
 	}
 
