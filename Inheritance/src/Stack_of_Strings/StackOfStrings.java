@@ -13,13 +13,13 @@ public class StackOfStrings {
 
 	public String pop() {
 
-		return this.data.remove(this.data.size()-1);
+		return this.data.remove(this.data.size() - 1);
 
 	}
 
 	public String peek() {
 
-		return this.data.get(this.data.size()-1);
+		return this.data.get(this.data.size() - 1);
 
 	}
 
