@@ -1,8 +1,12 @@
 package Pizza_Calories;
 
+import java.util.Map;
+
 public class Topping {
 	private String toppingType;
 	private double weight;
+	private static final Map<String, Double> VALID_TOPPINGS = Map.of("Meat", 1.2, "Veggies", 0.8, "Cheese", 1.1,
+			"Sauce", 0.9);
 
 	public Topping(String toppingType, double weight) {
 		setToppingType(toppingType);
@@ -10,8 +14,7 @@ public class Topping {
 	}
 
 	private void setToppingType(String toppingType) {
-		if (!toppingType.equalsIgnoreCase("Meat") && !toppingType.equalsIgnoreCase("Veggies")
-				&& !toppingType.equalsIgnoreCase("Cheese") && !toppingType.equalsIgnoreCase("Sauce")) {
+		if (!VALID_TOPPINGS.containsKey(toppingType)) {
 			throw new IllegalArgumentException("Cannot place " + toppingType + " on top of your pizza.");
 		}
 		this.toppingType = toppingType;
@@ -25,7 +28,7 @@ public class Topping {
 	}
 
 	public double calculateCalories() {
-		double toppingCalories = Toppings.valueOf(toppingType.toUpperCase()).calories;
+		double toppingCalories = VALID_TOPPINGS.get(this.toppingType);
 		return weight * 2 * toppingCalories;
 
 	}
