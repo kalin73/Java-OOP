@@ -12,10 +12,4 @@ public class European implements Person {
 		return name;
 	}
 
-	@Override
-	public String sayHello() {
-		String hello = "Hello";
-		return hello;
-	}
-
 }
