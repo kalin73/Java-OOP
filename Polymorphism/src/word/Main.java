@@ -3,20 +3,28 @@ package word;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-        StringBuilder text = new StringBuilder(scanner.nextLine());
+		StringBuilder text = new StringBuilder(scanner.nextLine());
 
-        CommandInterface commandInterface = Initialization.buildCommandInterface(text);
+		if (text.toString().isEmpty()) {
+			scanner.close();
+			return;
+		}
 
-        String inputLine = scanner.nextLine();
+		CommandInterface commandInterface = Initialization.buildCommandInterface(text);
 
-        while(!inputLine.equals("exit")) {
-            commandInterface.handleInput(inputLine);
-            inputLine = scanner.nextLine();
-        }
+		String inputLine = scanner.nextLine();
+		commandInterface.init();
 
-        System.out.println(text);
-    }
+		while (!inputLine.equals("exit")) {
+			commandInterface.handleInput(inputLine);
+			inputLine = scanner.nextLine();
+		}
+
+		System.out.println(text);
+
+		scanner.close();
+	}
 }

@@ -1,5 +1,5 @@
 package word;
 
 public interface TextTransform {
-    void invokeOn(StringBuilder text, int startIndex, int endIndex);
+    void invokeOn(TextModifier text, int startIndex, int endIndex);
 }
