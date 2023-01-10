@@ -2,9 +2,11 @@ package High_Quality_Mistakes;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Reflection implements Serializable {
 
-    private static final String nickName = "Pinguin";
+    @SuppressWarnings("unused")
+	private static final String nickName = "Pinguin";
     public String name;
     protected String webAddress;
     String email;
@@ -17,7 +19,8 @@ public class Reflection implements Serializable {
         this.setZip(1407);
     }
 
-    private Reflection(String name, String webAddress, String email) {
+    @SuppressWarnings("unused")
+	private Reflection(String name, String webAddress, String email) {
         this.setName(name);
         this.setWebAddress(webAddress);
         this.setEmail(email);
