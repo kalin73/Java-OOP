@@ -9,7 +9,10 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
-		BlackBoxInt b = instanciateBlackBox();
+		Constructor<BlackBoxInt> constructor = BlackBoxInt.class.getDeclaredConstructor();
+		constructor.setAccessible(true);
+		BlackBoxInt b = constructor.newInstance();
+
 		String[] input = sc.nextLine().split("_");
 
 		while (!"END".equals(input[0])) {
@@ -37,21 +40,5 @@ public class Main {
 				System.out.println(f.getInt(reflection));
 			}
 		}
-	}
-
-	@SuppressWarnings("rawtypes")
-	private static BlackBoxInt instanciateBlackBox() throws Exception {
-		Class reflection = BlackBoxInt.class;
-		Constructor[] constrs = reflection.getDeclaredConstructors();
-		int counter = 1;
-
-		for (Constructor c : constrs) {
-			if (counter == 2) {
-				c.setAccessible(true);
-				return (BlackBoxInt) c.newInstance();
-			}
-			counter++;
-		}
-		return null;
 	}
 }
