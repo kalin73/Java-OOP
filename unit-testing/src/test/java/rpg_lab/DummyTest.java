@@ -1,6 +1,6 @@
 package rpg_lab;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,34 +8,44 @@ import org.junit.Test;
 public class DummyTest {
 	private static final int ATTACK = 10;
 	private static final int DURABILITY = 10;
-	private static final int HEALTH = 100;
+	private static final int HEALTH = 10;
 	private static final int EXP = 10;
-	private static final int DEAD_DUMMY_HP = 0;
 
 	private Axe axe;
-	private Dummy aliveDummy;
-	private Dummy deadDummy;
+	private Dummy dummy;
 
 	@Before
 	public void setUp() {
 		this.axe = new Axe(ATTACK, DURABILITY);
-		this.aliveDummy = new Dummy(HEALTH, EXP);
-		this.deadDummy = new Dummy(DEAD_DUMMY_HP, EXP);
+		this.dummy = new Dummy(HEALTH, EXP);
 	}
 
 	@Test
 	public void testLosingHpIfAttacked() {
-		axe.attack(aliveDummy);
+		axe.attack(dummy);
 		int expected = HEALTH - ATTACK;
 
-		assertEquals(expected, aliveDummy.getHealth());
+		assertEquals(expected, dummy.getHealth());
 
 	}
 
 	@Test(expected = IllegalStateException.class)
 	public void deadDummyThrowsExceeption() {
-		axe.attack(deadDummy);
+		axe.attack(dummy);
+		axe.attack(dummy);
 
 	}
 
+	@Test
+	public void testDummyCanGiveExpWhenKilled() {
+		axe.attack(dummy);
+		int expected = EXP;
+
+		assertEquals(expected, dummy.giveExperience());
+	}
+
+	@Test(expected = IllegalStateException.class)
+	public void testAliveDummyCantGiveEXP() {
+		dummy.giveExperience();
+	}
 }
