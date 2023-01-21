@@ -13,11 +13,13 @@ public class DummyTest {
 
 	private Axe axe;
 	private Dummy dummy;
+	private Dummy deadDummy;
 
 	@Before
 	public void setUp() {
 		this.axe = new Axe(ATTACK, DURABILITY);
 		this.dummy = new Dummy(HEALTH, EXP);
+		this.deadDummy = new Dummy(0, EXP);
 	}
 
 	@Test
@@ -31,17 +33,15 @@ public class DummyTest {
 
 	@Test(expected = IllegalStateException.class)
 	public void deadDummyThrowsExceeption() {
-		axe.attack(dummy);
-		axe.attack(dummy);
+		axe.attack(deadDummy);
 
 	}
 
 	@Test
 	public void testDummyCanGiveExpWhenKilled() {
-		axe.attack(dummy);
 		int expected = EXP;
 
-		assertEquals(expected, dummy.giveExperience());
+		assertEquals(expected, deadDummy.giveExperience());
 	}
 
 	@Test(expected = IllegalStateException.class)
