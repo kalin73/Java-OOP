@@ -1,36 +1,53 @@
 package rpg_lab;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Hero {
 
-    private String name;
-    private int experience;
-    private Axe weapon;
+	private String name;
+	private int experience;
+	private Weapon weapon;
+	private List<Weapon> inventory;
 
-    public Hero(String name) {
-        this.name = name;
-        this.experience = 0;
-        this.weapon = new Axe(10, 10);
-    }
+	public Hero(String name, Weapon weapon) {
+		this.name = name;
+		this.experience = 0;
+		this.weapon = weapon;
+		this.inventory = new ArrayList<>();
+	}
 
-    public String getName() {
-        return this.name;
-    }
+	public Iterable<Weapon> getInventory() {
+		return Collections.unmodifiableList(inventory);
+	}
 
-    public int getExperience() {
-        return this.experience;
-    }
+	public int getInventorySize() {
+		return this.inventory.size();
+	}
 
-    public Axe getWeapon() {
-        return this.weapon;
-    }
+	public void addLoot(Weapon loot) {
+		inventory.add(loot);
+	}
 
-    public void attack(Dummy target) {
-        this.weapon.attack(target);
+	public String getName() {
+		return this.name;
+	}
 
-        if (target.isDead()) {
-            this.experience += target.giveExperience();
-        }
-    }
+	public int getExperience() {
+		return this.experience;
+	}
+
+	public Weapon getWeapon() {
+		return this.weapon;
+	}
+
+	public void attack(Target target) {
+		this.weapon.attack(target);
+
+		if (target.isDead()) {
+			this.experience += target.giveExperience();
+			addLoot(target.dropLoot());
+		}
+	}
 }
