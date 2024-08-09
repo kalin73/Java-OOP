@@ -1,4 +1,4 @@
-package composite;
+package compositePattern;
 
 public class Line implements Shape{
     @Override

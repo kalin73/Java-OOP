@@ -1,4 +1,4 @@
-package composite;
+package compositePattern;
 
 public class Rectangle implements Shape {
 

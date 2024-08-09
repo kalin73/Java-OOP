@@ -1,4 +1,4 @@
-package facade;
+package facadePattern;
 
 import java.sql.Connection;
 
