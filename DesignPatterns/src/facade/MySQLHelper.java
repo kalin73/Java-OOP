@@ -7,11 +7,11 @@ public class MySQLHelper {
         return null;
     }
 
-    public void generateMySQLPDFReport(String tableName, Connection connection) {
-        // Some login
+    public String generateMySQLPDFReport(String tableName, Connection connection) {
+        return "";
     }
 
-    public void generateMySQLHTMLReport(String tableName, Connection connection) {
-        // Some login
+    public String generateMySQLHTMLReport(String tableName, Connection connection) {
+        return "";
     }
 }

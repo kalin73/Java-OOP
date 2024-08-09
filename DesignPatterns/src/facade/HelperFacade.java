@@ -3,28 +3,28 @@ package facade;
 import java.sql.Connection;
 
 public class HelperFacade {
-    public static void generateReport(DBTypes type, ReportTypes reportType, String tableName) {
-        Connection connection = null;
+    public static String generateReport(DBTypes type, ReportTypes reportType, String tableName) {
+        Connection connection;
 
         switch (type) {
             case MYSQL -> {
                 connection = MySQLHelper.getConnection();
                 MySQLHelper mySQLHelper = new MySQLHelper();
-                switch (reportType) {
+                return switch (reportType) {
                     case HTML -> mySQLHelper.generateMySQLHTMLReport(tableName, connection);
                     case PDF -> mySQLHelper.generateMySQLPDFReport(tableName, connection);
-                }
+                };
             }
             case ORACLE -> {
                 connection = MySQLHelper.getConnection();
                 OracleHelper oracleHelper = new OracleHelper();
-                switch (reportType) {
+                return switch (reportType) {
                     case HTML -> oracleHelper.generateOracleHTMLReport(tableName, connection);
                     case PDF -> oracleHelper.generateOraclePDFReport(tableName, connection);
-                }
+                };
             }
         }
-
+        return "";
     }
 
     public enum DBTypes {

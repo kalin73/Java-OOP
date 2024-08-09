@@ -7,11 +7,11 @@ public class OracleHelper {
         return null;
     }
 
-    public void generateOraclePDFReport(String tableName, Connection connection) {
-        // Some login
+    public String generateOraclePDFReport(String tableName, Connection connection) {
+        return "";
     }
 
-    public void generateOracleHTMLReport(String tableName, Connection connection) {
-        // Some login
+    public String generateOracleHTMLReport(String tableName, Connection connection) {
+        return "";
     }
 }

@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fdf8248-027f-4b0e-8d4f-757fa1245f8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/facade/HelperFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/facade/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/facade/MySQLHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/facade/OracleHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="9fdf8248-027f-4b0e-8d4f-757fa1245f8c" name="Changes" comment="facade design pattern">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facade/HelperFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facade/HelperFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facade/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facade/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facade/MySQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facade/MySQLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facade/OracleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facade/OracleHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,10 +85,25 @@
       <workItem from="1723104946981" duration="1986000" />
       <workItem from="1723117249060" duration="373000" />
       <workItem from="1723156556716" duration="428000" />
+      <workItem from="1723197721943" duration="556000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1723197774012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723197774012</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <MESSAGE value="facade design pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="facade design pattern" />
   </component>
 </project>

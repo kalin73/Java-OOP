@@ -16,7 +16,7 @@ public class Main {
         oracleHelper.generateOraclePDFReport(tableName, oracleConnection);
 
         //With facade
-        HelperFacade.generateReport(HelperFacade.DBTypes.MYSQL, HelperFacade.ReportTypes.PDF, tableName);
-        HelperFacade.generateReport(HelperFacade.DBTypes.ORACLE, HelperFacade.ReportTypes.PDF, tableName);
+        String pdfSQLReport = HelperFacade.generateReport(HelperFacade.DBTypes.MYSQL, HelperFacade.ReportTypes.PDF, tableName);
+        String pdfOracleReport = HelperFacade.generateReport(HelperFacade.DBTypes.ORACLE, HelperFacade.ReportTypes.PDF, tableName);
     }
 }
