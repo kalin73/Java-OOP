@@ -4,18 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fdf8248-027f-4b0e-8d4f-757fa1245f8c" name="Changes" comment="composite design pattern">
-      <change afterPath="$PROJECT_DIR$/src/command/FileInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/FileSystemReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/UnixFileSystemReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/WindowsFileSystemReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/commands/CloseFileCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/commands/DeleteFileCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/commands/OpenFileCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/commands/WriteFileCommand.java" afterDir="false" />
+    <list default="true" id="9fdf8248-027f-4b0e-8d4f-757fa1245f8c" name="Changes" comment="renaming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builderPattern/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/builderPattern/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builderPattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/builderPattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositePattern/Drawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/compositePattern/Drawing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositePattern/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/compositePattern/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositePattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/compositePattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositePattern/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/compositePattern/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositePattern/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/compositePattern/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facadePattern/HelperFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/facadePattern/HelperFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facadePattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/facadePattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facadePattern/MySQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/facadePattern/MySQLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facadePattern/OracleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural/facadePattern/OracleHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/Cake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/CakeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/CakeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/CakeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/CakeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/ChocoCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/ChocoCake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/FruitCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/FruitCake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryPattern/SpinachCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/factoryPattern/SpinachCake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototypePattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/prototypePattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototypePattern/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/prototypePattern/Point2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singletonPattern/Datastore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/singletonPattern/Datastore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singletonPattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational/singletonPattern/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,15 +90,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.command.Main">
+  <component name="RunManager" selected="Application.behavioral.command.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="composite.Main" />
+      <option name="MAIN_CLASS_NAME" value="structural.compositePattern.Main" />
       <module name="DesignPatterns" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="composite.*" />
+          <option name="PATTERN" value="structural.compositePattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="command.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="command.Main" />
+    <configuration name="behavioral.command.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="behavioral.command.Main" />
       <module name="DesignPatterns" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="command.commands.*" />
+          <option name="PATTERN" value="behavioral.command.commands.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +120,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.command.Main" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.behavioral.command.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.command.Main" />
+        <item itemvalue="Application.behavioral.command.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -138,7 +150,7 @@
       <workItem from="1723104946981" duration="1986000" />
       <workItem from="1723117249060" duration="373000" />
       <workItem from="1723156556716" duration="428000" />
-      <workItem from="1723197721943" duration="8241000" />
+      <workItem from="1723197721943" duration="8547000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -164,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723212138500</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="command design pattern">
+      <option name="closed" value="true" />
+      <created>1723232951083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723232951083</updated>
+    </task>
+    <task id="LOCAL-00005" summary="renaming">
+      <option name="closed" value="true" />
+      <created>1723233068119</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723233068119</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +202,8 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="facade design pattern" />
     <MESSAGE value="composite design pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="composite design pattern" />
+    <MESSAGE value="command design pattern" />
+    <MESSAGE value="renaming" />
+    <option name="LAST_COMMIT_MESSAGE" value="renaming" />
   </component>
 </project>
